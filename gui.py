@@ -1,6 +1,12 @@
 from tkinter import *
 
+from tkinter import *
+
 class Window(Frame):
+
+    def client_exit(self):
+        exit()
+    
     def _init_(self, master = None):
         Frame._init_(self, master)
 
@@ -13,8 +19,8 @@ class Window(Frame):
         
         self.pack(fill=BOTH, expand = 1)
 
-        quitButton = Button(self,text = "Quit")
-        quitButton.place(x=0, y=0)
+        quitButton = Button(self,text = "Quit", command=self.client_exit)
+        quitButton.place(x=360, y=270)
         
         
 root = Tk()
