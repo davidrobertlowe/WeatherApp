@@ -1,30 +1,22 @@
 from tkinter import *
 
-from tkinter import *
+def click():
+    entered_text = textentry.get()
 
-class Window(Frame):
+#Main
+window = Tk()
+window.title("Weather Report")
+window.configure(background = "grey")
 
-    def client_exit(self):
-        exit()
-    
-    def _init_(self, master = None):
-        Frame._init_(self, master)
+#Prompt Label
+Label (window, text = "Please enter a city:", bg = "grey", fg = "white", font = "none 12 bold").grid(row = 0, column = 0, sticky = S)
 
-        self.master = master
+#Textbox
+textentry = Entry(window, width = 50, bg = "white")
+textentry.grid(row=2,column = 0, sticky = S)
 
-        self.init_window()
+#Submit
+Button(window, text = "SUBMIT", width = 6, command = click).grid(row=3, column=0, sticky = S)
 
-    def init_window(self):
-        self.master.title("GUI")
-        
-        self.pack(fill=BOTH, expand = 1)
-
-        quitButton = Button(self,text = "Quit", command=self.client_exit)
-        quitButton.place(x=360, y=270)
-        
-        
-root = Tk()
-root.geometry("400x300")
-app = Window(root)
-app.init_window()
-root.mainloop()
+#Run the Main Loop
+window.mainloop()
