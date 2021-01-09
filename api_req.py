@@ -11,12 +11,15 @@ api_key = "24aa68308c034c5d485bda6b7ea92ad7"
 # base_url variable to store url 
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
   
-# Give city name 
-city_name = input("Enter city name : ") 
+# Give city name
+def city_name():
+    
+  city_name = input() 
+  return city_name
   
 # complete_url variable to store 
 # complete url address 
-complete_url = base_url + "appid=" + api_key + "&q=" + city_name 
+complete_url = base_url + "appid=" + api_key + "&q=" + str(city_name())
 
 def req():
     # get method of requests module 
