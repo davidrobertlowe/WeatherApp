@@ -1,4 +1,5 @@
 from tkinter import *
+import data
 
 def click():
     entered_text = textentry.get()
