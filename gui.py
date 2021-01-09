@@ -18,5 +18,11 @@ textentry.grid(row=2,column = 0, sticky = S)
 #Submit
 Button(window, text = "SUBMIT", width = 6, command = click).grid(row=3, column=0, sticky = S)
 
+
+#Results Label
+Label (window, text = "\nWeather:", bg="grey", fg = "white", font=" none 12 bold").grid(row=4, column = 0, sticky = W)
+Label (window, text = "\nTemperature:", bg="grey", fg = "white", font=" none 12 bold").grid(row=5, column = 0, sticky = W)
+Label (window, text = "\nWind:", bg="grey", fg = "white", font=" none 12 bold").grid(row=6, column = 0, sticky = W)
+
 #Run the Main Loop
 window.mainloop()
