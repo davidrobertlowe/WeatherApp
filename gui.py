@@ -2,6 +2,8 @@ from tkinter import *
 
 def click():
     entered_text = textentry.get()
+    output.delete(0,0, END)
+    
 
 #Main
 window = Tk()
@@ -34,11 +36,12 @@ output.grid(row=7,column = 0, columnspan = 2, sticky = W)
 output = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
 output.grid(row=9,column = 0, columnspan = 2, sticky = W)
 
-
-
+#Exit
 def close_window():
     window.destroy()
     exit()
+Button(window, text = "EXIT", width = 4, command = close_window).grid(row=10, column=0, sticky = E)
+
 
 
 #Run the Main Loop
