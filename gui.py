@@ -13,11 +13,12 @@ class Window(Frame):
         
         self.pack(fill=BOTH, expand = 1)
 
-        quitButton = Button(self, text, "Quit")
+        quitButton = Button(self,text = "Quit")
         quitButton.place(x=0, y=0)
         
         
 root = Tk()
 root.geometry("400x300")
 app = Window(root)
+app.init_window()
 root.mainloop()
