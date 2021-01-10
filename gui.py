@@ -35,7 +35,7 @@ window.title("Weather Report")
 window.configure(background = "grey")
 
 #Prompt Label
-Label (window, text = "Weather Report", bg = "grey", fg = "white", font = "none 12 bold").grid(row = 0, column = 0, sticky = S)
+Label (window, text = "Canadian Weather Report", bg = "grey", fg = "white", font = "none 12 bold").grid(row = 0, column = 0, sticky = S)
 Label (window, text = "Please enter a city:", bg = "grey", fg = "white", font = "none 12 bold").grid(row = 1, column = 0, sticky = S)
 
 #Textbox
