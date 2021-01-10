@@ -1,9 +1,17 @@
 from tkinter import *
 import data
+import requests
 
 def click():
     entered_text = textentry.get()
     output.delete(0,0, END)
+    if checkIfInCA(entered_text):
+        print("awesome")
+    else:
+        print("nah")
+    
+
+
     
 
 #Main
