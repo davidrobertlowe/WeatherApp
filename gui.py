@@ -1,9 +1,11 @@
 from tkinter import *
-import data
+
 
 def click():
     entered_text = textentry.get()
-    output.delete(0,0, END)
+    output1.delete(0,0, END)
+    output2.delete(0,0, END)
+    output3.delete(0,0, END)
     
 
 #Main
@@ -28,14 +30,14 @@ Label (window, text = "\nTemperature:", bg="grey", fg = "white", font=" none 12 
 Label (window, text = "\nWind:", bg="grey", fg = "white", font=" none 12 bold").grid(row=8, column = 0, sticky = W)
 
 #Ouput
-output = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
-output.grid(row=5,column = 0, columnspan = 2, sticky = W)
+output1 = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
+output1.grid(row=5,column = 0, columnspan = 2, sticky = W)
 
-output = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
-output.grid(row=7,column = 0, columnspan = 2, sticky = W)
+output2 = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
+output2.grid(row=7,column = 0, columnspan = 2, sticky = W)
 
-output = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
-output.grid(row=9,column = 0, columnspan = 2, sticky = W)
+output3 = Text(window, width = 30, height = 1, wrap = WORD, background = "white")
+output3.grid(row=9,column = 0, columnspan = 2, sticky = W)
 
 #Exit
 def close_window():
