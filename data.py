@@ -47,11 +47,14 @@ def checkIfInCA():
     else returns false
     """
     data = api_req.req()
-    if (data["sys"]["country"] == "CA"):
-        return True
-    else:
+    try:
+        if (data["sys"]["country"] == "CA"):
+            return True
+        else:
+            return False
+    except KeyError:
         return False
-    
+
     
 
 

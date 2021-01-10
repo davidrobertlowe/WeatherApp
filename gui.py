@@ -4,18 +4,20 @@ import api_req
 
 def click():
     entered_text = textentry.get()
-    '''
-    output1.delete(0, "END")
-    output2.delete(0, "END")
-    output3.delete(0, "END")
-    '''
+
+    textentry.delete(0,END)
+
+    output1.delete(1.0, END)
+    output2.delete(1.0, END)
+    output3.delete(1.0, END)
+
     api_req.city(entered_text)
     if data.checkIfInCA():
-        '''
-        weather = 
-        temperature = 
-        wind =
-        '''
+        
+        weather = data.weatherMain()
+        temperature = data.temperature()
+        wind = data.wind()
+        
     else:
         weather = "N/A for non-Canadian cities"
         temperature = "N/A for non-Canadian cities"
