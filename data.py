@@ -8,30 +8,35 @@ import api_req
 
 #print(y["weather"][0])
 
-data = api_req.req()
+
 
 def weatherMain():
     "takes a jsonObject and returns the main weather as a string"
+    data = api_req.req()
     
     return (data["weather"][0]["main"])
 
 def weatherDescription():
     "takes a jsonObject and returns the weather description as a string"
+    data = api_req.req()
     
     return (data["weather"][0]["description"])
 
 def weatherIconId():
     "takes a jsonObject and returns the weather icon id"
+    data = api_req.req()
     
     return (data["weather"][0]["icon"])
 
 def temperature():
     "takes a jsonObject and returns the temeprature"
+    data = api_req.req()
     
     return (data["main"]["temp"])
 
 def wind():
     "Takes a jsonObject and returns the wind speed and degree"
+    data = api_req.req()
 
     return ('Wind speed of ' + str(data["wind"]["speed"])
             + " at an angle of " + str(data["wind"]["deg"]) + " degrees.")
@@ -41,7 +46,7 @@ def checkIfInCA():
     checks if the requested city is in Canada if it is then returns true
     else returns false
     """
-
+    data = api_req.req()
     if (data["sys"]["country"] == "CA"):
         return True
     else:

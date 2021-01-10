@@ -1,11 +1,30 @@
 from tkinter import *
-
+import data
+import api_req
 
 def click():
     entered_text = textentry.get()
-    output1.delete(0,0, END)
-    output2.delete(0,0, END)
-    output3.delete(0,0, END)
+    '''
+    output1.delete(0, "END")
+    output2.delete(0, "END")
+    output3.delete(0, "END")
+    '''
+    api_req.city(entered_text)
+    if data.checkIfInCA():
+        '''
+        weather = 
+        temperature = 
+        wind =
+        '''
+    else:
+        weather = "N/A for non-Canadian cities"
+        temperature = "N/A for non-Canadian cities"
+        wind = "N/A for non-Canadian cities"
+    output1.insert(END, weather)
+    output2.insert(END, temperature)
+    output3.insert(END, wind)
+    
+   
     
 
 #Main
