@@ -7,7 +7,6 @@ import api_req
 #y = json.loads(x)
 
 #print(y["weather"][0])
-api_req.city_name()
 
 data = api_req.req()
 
@@ -37,7 +36,7 @@ def wind():
     return ('Wind speed of ' + str(data["wind"]["speed"])
             + " at an angle of " + str(data["wind"]["deg"]) + " degrees.")
 
-def checkIfInCA(city_name):
+def checkIfInCA():
     """
     checks if the requested city is in Canada if it is then returns true
     else returns false

@@ -4,7 +4,10 @@
   
 # import required modules 
 import requests, json 
-  
+
+city_name = ""
+complete_url = ""
+
 # Enter your API key here 
 api_key = "24aa68308c034c5d485bda6b7ea92ad7"
   
@@ -12,14 +15,17 @@ api_key = "24aa68308c034c5d485bda6b7ea92ad7"
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
   
 # Give city name
-def city_name():
+def city(req_city):
     
-  city_name = input() 
-  return city_name
+  global city_name
+  city_name = req_city
+  
+  global complete_url
+  complete_url = base_url + "appid=" + api_key + "&q=" + city_name
   
 # complete_url variable to store 
 # complete url address 
-complete_url = base_url + "appid=" + api_key + "&q=" + str(city_name())
+
 
 def req():
     # get method of requests module 
@@ -31,7 +37,7 @@ def req():
     # python format data 
     return response.json() 
 
-
+"""
 x = requests.get(complete_url).json()
 # Now x contains list of nested dictionaries 
 # Check the value of "cod" key is equal to 
@@ -65,3 +71,4 @@ if x["cod"] != "404":
   
 else: 
     print(" City Not Found ")  
+"""
